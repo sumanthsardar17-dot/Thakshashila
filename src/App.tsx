@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import logoUrl from "./logo.png";
 
 /* ═══════════════════════════════════════════════════
    DESIGN TOKENS — Navy · Teal · Molten Gold
@@ -230,7 +229,6 @@ export default function App() {
         transition:"all 0.35s",
       }}>
         <div style={{display:"flex",alignItems:"center",gap:11,cursor:"pointer"}} onClick={()=>setPage("home")}>
-          <img src={logoUrl} alt="Takshashila Logo" style={{width: 42, height: 42, objectFit: "contain", borderRadius: "50%"}} />
           <div>
             <div style={{fontFamily:"'Cinzel',serif",fontWeight:900,fontSize:16,
               background:`linear-gradient(90deg,${C.gold1},${C.gold2},${C.goldShine},${C.gold1})`,
@@ -304,7 +302,6 @@ export default function App() {
             <div style={{position:"relative",zIndex:5,textAlign:"center",animation:"fadeUp 0.7s ease both"}}>
               {/* Logo row */}
               <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:20,marginBottom:18}}>
-                <img src={logoUrl} alt="Takshashila Logo" style={{width: 120, height: 120, objectFit: "contain", borderRadius: "50%", boxShadow: `0 8px 32px ${C.gold1}33`, border: `2px solid ${C.gold1}44`}} />
                 
                 <div>
                   <h1 style={{
