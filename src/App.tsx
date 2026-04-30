@@ -230,15 +230,7 @@ export default function App() {
         transition:"all 0.35s",
       }}>
         <div style={{display:"flex",alignItems:"center",gap:11,cursor:"pointer"}} onClick={()=>setPage("home")}>
-          <img src={logoUrl} alt="Takshashila Logo" style={{width: 42, height: 42, objectFit: "contain", borderRadius: "50%"}} onError={(e: any)=>{e.currentTarget.style.display="none"; e.currentTarget.nextSibling.style.display="flex";}} />
-          <div style={{
-            display: "none", /* Fallback if logo not yet uploaded */
-            width:42,height:42,borderRadius:"50%",
-            background:`linear-gradient(135deg,${C.teal1},${C.teal2})`,
-            alignItems:"center",justifyContent:"center",
-            fontSize:20,boxShadow:`0 0 16px ${C.teal2}66`,
-            border:`1.5px solid ${C.gold1}44`,
-          }}>⚕️</div>
+          <img src={logoUrl} alt="Takshashila Logo" style={{width: 42, height: 42, objectFit: "contain", borderRadius: "50%"}} />
           <div>
             <div style={{fontFamily:"'Cinzel',serif",fontWeight:900,fontSize:16,
               background:`linear-gradient(90deg,${C.gold1},${C.gold2},${C.goldShine},${C.gold1})`,
@@ -312,18 +304,8 @@ export default function App() {
             <div style={{position:"relative",zIndex:5,textAlign:"center",animation:"fadeUp 0.7s ease both"}}>
               {/* Logo row */}
               <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:20,marginBottom:18}}>
-                <img src={logoUrl} alt="Takshashila Logo" style={{width: 120, height: 120, objectFit: "contain", borderRadius: "50%", boxShadow: `0 8px 32px ${C.gold1}33`, border: `2px solid ${C.gold1}44`}} onError={(e: any)=>{e.currentTarget.style.display="none"; e.currentTarget.nextElementSibling?.setAttribute('style', 'display:flex; align-items:center; justify-content:center; gap:20px; margin-bottom:18px;');}} />
+                <img src={logoUrl} alt="Takshashila Logo" style={{width: 120, height: 120, objectFit: "contain", borderRadius: "50%", boxShadow: `0 8px 32px ${C.gold1}33`, border: `2px solid ${C.gold1}44`}} />
                 
-                <div style={{display:"none"}}> {/* Wrapper for fallback icons if image fails */ }
-                  <div style={{
-                    width:66,height:66,borderRadius:"50%",
-                    background:`linear-gradient(135deg,${C.teal0},${C.teal1})`,
-                    border:`2px solid ${C.gold1}55`,
-                    display:"flex",alignItems:"center",justifyContent:"center",fontSize:30,
-                    boxShadow:`0 8px 32px ${C.teal2}44, inset 0 1px 0 ${C.gold1}22`,
-                  }}>👨‍⚕️</div>
-                </div>
-
                 <div>
                   <h1 style={{
                     fontFamily:"'Cinzel Decorative',serif",
@@ -341,16 +323,6 @@ export default function App() {
                     textTransform:"uppercase",opacity:0.85,
                   }}>Pharmacy Knowledge Hub</div>
                   <div style={{width:"100%",height:1,background:`linear-gradient(90deg,transparent,${C.gold1},transparent)`,marginTop:8}} />
-                </div>
-                
-                <div style={{display:"none"}}> {/* Wrapper for fallback icons if image fails */}
-                  <div style={{
-                    width:66,height:66,borderRadius:"50%",
-                    background:`linear-gradient(135deg,${C.teal0},${C.teal1})`,
-                    border:`2px solid ${C.gold1}55`,
-                    display:"flex",alignItems:"center",justifyContent:"center",fontSize:30,
-                    boxShadow:`0 8px 32px ${C.teal2}44, inset 0 1px 0 ${C.gold1}22`,
-                  }}>👩‍⚕️</div>
                 </div>
               </div>
               <p style={{color:C.muted,fontSize:14,maxWidth:460,margin:"0 auto 28px",lineHeight:1.8,fontWeight:600}}>
