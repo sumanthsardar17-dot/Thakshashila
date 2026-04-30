@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import logoUrl from "./logo.png";
 
 /* ═══════════════════════════════════════════════════
    DESIGN TOKENS — Navy · Teal · Molten Gold
@@ -229,7 +230,7 @@ export default function App() {
         transition:"all 0.35s",
       }}>
         <div style={{display:"flex",alignItems:"center",gap:11,cursor:"pointer"}} onClick={()=>setPage("home")}>
-          <img src="/logo.png" alt="Takshashila Logo" style={{width: 42, height: 42, objectFit: "contain", borderRadius: "50%"}} onError={(e: any)=>{e.currentTarget.style.display="none"; e.currentTarget.nextSibling.style.display="flex";}} />
+          <img src={logoUrl} alt="Takshashila Logo" style={{width: 42, height: 42, objectFit: "contain", borderRadius: "50%"}} onError={(e: any)=>{e.currentTarget.style.display="none"; e.currentTarget.nextSibling.style.display="flex";}} />
           <div style={{
             display: "none", /* Fallback if logo not yet uploaded */
             width:42,height:42,borderRadius:"50%",
@@ -311,9 +312,9 @@ export default function App() {
             <div style={{position:"relative",zIndex:5,textAlign:"center",animation:"fadeUp 0.7s ease both"}}>
               {/* Logo row */}
               <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:20,marginBottom:18}}>
-                <img src="/logo.png" alt="Takshashila Logo" style={{width: 120, height: 120, objectFit: "contain", borderRadius: "50%", boxShadow: `0 8px 32px ${C.gold1}33`, border: `2px solid ${C.gold1}44`}} onError={(e: any)=>{e.currentTarget.style.display="none"; e.currentTarget.nextElementSibling?.setAttribute('style', 'display:flex; align-items:center; justify-content:center; gap:20px; margin-bottom:18px;');}} />
+                <img src={logoUrl} alt="Takshashila Logo" style={{width: 120, height: 120, objectFit: "contain", borderRadius: "50%", boxShadow: `0 8px 32px ${C.gold1}33`, border: `2px solid ${C.gold1}44`}} onError={(e: any)=>{e.currentTarget.style.display="none"; e.currentTarget.nextElementSibling?.setAttribute('style', 'display:flex; align-items:center; justify-content:center; gap:20px; margin-bottom:18px;');}} />
                 
-                <div style={{display:"none"}}> {/* Wrapper for fallback icons if image fails */}
+                <div style={{display:"none"}}> {/* Wrapper for fallback icons if image fails */ }
                   <div style={{
                     width:66,height:66,borderRadius:"50%",
                     background:`linear-gradient(135deg,${C.teal0},${C.teal1})`,
